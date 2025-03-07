@@ -71,7 +71,7 @@ class RiscvGnuToolchain < Formula
     # system "sed", "-i", ".bak", "s/.* x-darwin.$//", "gcc/gcc/config.host"
 
     system "./configure", *args
-    system "gmake"
+    system "gmake -j8"
 
     # don't install gdb bindings if system already has them
     if File.exist?("#{HOMEBREW_PREFIX}/share/gdb")

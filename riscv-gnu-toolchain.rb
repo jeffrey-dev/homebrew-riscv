@@ -60,8 +60,7 @@ class RiscvGnuToolchain < Formula
 
     args = [
       "--prefix=#{prefix}",
-      "--with-cmodel=medany",
-      "--enable-default-pie"
+      "--with-cmodel=medany"
     ]
     args << "--enable-multilib" unless build.with?("NOmultilib")
 
